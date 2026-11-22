@@ -581,3 +581,31 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .rcard--cta p { color: var(--on-dark-muted); max-width: 380px; }
 .rcard__cta-btn { align-self: flex-start; display: inline-flex; gap: 10px; padding: 16px 26px; border-radius: 999px; background: var(--bg); color: var(--ink); font-family: var(--display); font-weight: 500; transition: transform .5s var(--ease); }
 .rcard--cta:hover .rcard__cta-btn { transform: translateX(8px); }
+
+/* result cards: cover screenshot + story */
+.rcard__cover {
+  display: block; position: relative; width: calc(100% + 2 * clamp(22px, 2.8vw, 36px));
+  margin: calc(-1 * clamp(22px, 2.8vw, 36px)) calc(-1 * clamp(22px, 2.8vw, 36px)) 0;
+  aspect-ratio: 16 / 10; overflow: hidden; border: 0; padding: 0; cursor: zoom-in;
+  background: #fff; border-bottom: 1px solid var(--line);
+}
+.rcard__cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 1.2s var(--ease); }
+.rcard__cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(18,18,18,.35), transparent 45%); opacity: .7; transition: opacity .5s; }
+.rcard__cover:hover img { transform: scale(1.06); }
+.rcard__cover:hover::after { opacity: 1; }
+.rcard__cover-tag, .rcard__cover-zoom {
+  position: absolute; z-index: 1; font-family: var(--display); font-size: 12.5px; font-weight: 500;
+  padding: 7px 13px; border-radius: 999px;
+}
+.rcard__cover-tag { left: 14px; bottom: 14px; background: rgba(255,255,255,.92); color: var(--ink); }
+.rcard__cover-zoom { right: 14px; bottom: 14px; background: var(--ink); color: var(--bg); transform: translateY(8px); opacity: 0; transition: transform .5s var(--ease), opacity .5s var(--ease); }
+.rcard__cover:hover .rcard__cover-zoom, .rcard__cover:focus-visible .rcard__cover-zoom { transform: none; opacity: 1; }
+@media (hover: none) { .rcard__cover-zoom { opacity: 1; transform: none; } }
+.rcard__story h4 { font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 10px; }
+.rcard__story ol { counter-reset: st; display: grid; gap: 8px; }
+.rcard__story li { counter-increment: st; position: relative; padding-left: 30px; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+.rcard__story li::before {
+  content: counter(st); position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--bg); font-family: var(--display); font-size: 11px; display: grid; place-items: center; color: var(--ink);
+}
+.lightbox__figure img { background: #fff; }

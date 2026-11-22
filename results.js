@@ -1,25 +1,52 @@
 /*
   Organic results. One entry per client.
-  - shots: optional list of screenshot paths (put images in assets/results/).
-    When present, a "View proof" button opens them full size.
+  shots: screenshots in assets/results/ (first one is the card cover; all open in the viewer).
 */
 window.RESULTS = [
   {
     brand: "Alaa Ali",
-    sector: "Saudi abaya brand · Verified account",
+    sector: "Saudi abaya brand · Verified on Instagram",
     country: "KSA",
     platform: "Instagram",
-    period: "Last 30 days",
-    goal: "Brand awareness through celebrity collaborations",
-    hero: { value: 65818, label: "Views" },
+    period: "1 month",
+    goal: "Brand fame & awareness",
+    outcome: "Featured on Saudi TV",
+    hero: { value: 65, suffix: "K+", label: "Views in one month" },
     metrics: [
       { value: "8,665", label: "Accounts reached" },
       { value: "32.2%", label: "From non-followers" },
-      { value: "567", label: "Interactions" },
+      { value: "70%", label: "Designs, not videos" },
       { value: "17.9K", label: "Followers" }
     ],
-    note: "Campaigns with top Saudi celebrities and influencers, keeping a premium brand visible in a competitive abaya market.",
-    shots: []
+    story: [
+      "Built the content plan and visuals for one month of work, with about 70% static designs.",
+      "Reached out to Saudi celebrities and set up collaborations with them for the brand.",
+      "The brand grew its name and was featured on Saudi television."
+    ],
+    coverPos: "62% 25%",
+    shots: ["assets/results/alaa-ali-insights.jpg", "assets/results/alaa-ali-profile.jpg"]
+  },
+  {
+    brand: "Maarifat Al-Kholoud School",
+    sector: "Private school · Education",
+    country: "KSA",
+    platform: "Facebook",
+    period: "28 days",
+    goal: "Student enrollment",
+    outcome: "Class full, registration closed early",
+    hero: { value: 449.5, decimals: 1, suffix: "K", label: "Views" },
+    metrics: [
+      { value: "218.2K", label: "Unique viewers" },
+      { value: "1.8K", label: "Link clicks" },
+      { value: "+11.9K%", label: "Views growth" },
+      { value: "+7.5K%", label: "Link clicks growth" }
+    ],
+    story: [
+      "One clear goal: get parents to register their children for the new school year.",
+      "Every post was built to push people to the registration link, not just to collect likes.",
+      "The class filled up, and the school closed registration before the deadline."
+    ],
+    shots: ["assets/results/maarifat-alkholoud-school.jpg"]
   },
   {
     brand: "Marketing Agency",
@@ -28,41 +55,29 @@ window.RESULTS = [
     platform: "Facebook",
     period: "90 days",
     goal: "Views & brand fame",
+    outcome: "All from one single video",
     hero: { value: 7.7, decimals: 1, suffix: "M", label: "Views" },
     metrics: [
       { value: "4.3M", label: "Unique viewers" },
       { value: "+30.3%", label: "Viewers growth" },
       { value: "+23.1%", label: "Views growth" },
-      { value: "1", label: "Single video" }
+      { value: "1", label: "Video" }
     ],
-    note: "All of these numbers came from one video. Built the creative concept and content from scratch.",
-    shots: []
+    story: [
+      "Content creation for the creatives the agency publishes on social media.",
+      "Built the idea, hook and script around what makes people stop and watch.",
+      "One video alone generated 7.7M views and 4.3M unique viewers."
+    ],
+    shots: ["assets/results/marketing-agency-video.jpg"]
   },
   {
-    brand: "Saudi Private School",
-    sector: "Education · Student enrollment",
-    country: "KSA",
-    platform: "Facebook",
-    period: "28 days",
-    goal: "Student enrollment",
-    outcome: "Grade 1 fully enrolled for the new year",
-    hero: { value: 449.5, decimals: 1, suffix: "K", label: "Views" },
-    metrics: [
-      { value: "218.2K", label: "Unique viewers" },
-      { value: "1.8K", label: "Link clicks" },
-      { value: "+11.9K%", label: "Views growth" },
-      { value: "+7.5K%", label: "Link clicks growth" }
-    ],
-    note: "Social content built around one business goal: getting parents to register. First grade filled up completely.",
-    shots: []
-  },
-  {
-    brand: "Saudi Flower Brand",
-    sector: "Flowers & gifting · First month of work",
+    brand: "Abq Al-Hadaya",
+    sector: "Flowers & gifts · Brand-new store",
     country: "KSA",
     platform: "Instagram",
-    period: "Last 30 days",
-    goal: "Reach new customers fast",
+    period: "First 40 days",
+    goal: "Launch a new brand from zero",
+    outcome: "No ads at all",
     hero: { value: 931675, label: "Views" },
     metrics: [
       { value: "674,868", label: "Accounts reached" },
@@ -70,58 +85,34 @@ window.RESULTS = [
       { value: "97.6%", label: "From non-followers" },
       { value: "736K", label: "Top Reel views" }
     ],
-    note: "Month one. Almost a million views, nearly all from new people who had never followed the brand.",
-    shots: []
+    story: [
+      "A flower and gift brand that had been open for only 40 days.",
+      "A Reels-first plan (99.5% of views) built to reach new people every day.",
+      "Nearly a million views from social media alone, without any ads."
+    ],
+    coverPos: "60% 30%",
+    shots: ["assets/results/abq-alhadaya-flowers.jpg"]
   },
   {
     brand: "Easy City",
-    sector: "E-commerce & delivery platform",
-    country: "KSA",
-    platform: "TikTok",
-    period: "Account overview",
-    goal: "Awareness & app adoption",
-    hero: { value: 3.4, decimals: 1, suffix: "M", label: "Video views" },
-    metrics: [
-      { value: "8.3K", label: "Likes" },
-      { value: "7.6K", label: "Profile views" },
-      { value: "853", label: "Shares" },
-      { value: "207", label: "Comments" }
-    ],
-    note: "Short-form content that put a new delivery platform in front of millions of Saudi viewers.",
-    shots: []
-  },
-  {
-    brand: "Saudi Brand · Facebook",
-    sector: "Traffic-focused content",
-    country: "KSA",
-    platform: "Facebook",
-    period: "30 days",
-    goal: "Traffic & link clicks",
-    hero: { value: 1.7, decimals: 1, suffix: "M", label: "Views" },
-    metrics: [
-      { value: "248.5K", label: "Unique viewers" },
-      { value: "9.4K", label: "Link clicks" },
-      { value: "959", label: "Interactions" },
-      { value: "30", label: "Days" }
-    ],
-    note: "Content built to send people off the platform and onto the brand's own pages.",
-    shots: []
-  },
-  {
-    brand: "Saudi Brand · Facebook",
-    sector: "Always-on content plan",
-    country: "KSA",
-    platform: "Facebook",
+    sector: "Delivery & e-commerce app · Talabat competitor",
+    country: "Egypt → KSA",
+    platform: "Facebook + TikTok",
     period: "90 days",
-    goal: "Reach & traffic",
-    hero: { value: 3.2, decimals: 1, suffix: "M", label: "Views" },
+    goal: "Awareness & merchant growth",
+    outcome: "3.4M views on TikTok",
+    hero: { value: 3.2, decimals: 1, suffix: "M", label: "Facebook views" },
     metrics: [
+      { value: "3.4M", label: "TikTok video views" },
+      { value: "1.7M", label: "Views, last 30 days" },
       { value: "448.8K", label: "Unique viewers" },
-      { value: "15.9K", label: "Link clicks" },
-      { value: "2.1K", label: "Interactions" },
-      { value: "90", label: "Days" }
+      { value: "15.9K", label: "Link clicks" }
     ],
-    note: "A steady content engine across a full quarter, turning reach into real website visits.",
-    shots: []
+    story: [
+      "An Egyptian app in the Saudi market that brings stores and restaurants onto its platform.",
+      "Ran social media on Facebook and TikTok for both customers and merchants.",
+      "3.4M TikTok views, plus 3.2M Facebook views in 90 days (1.7M in the last 30 days)."
+    ],
+    shots: ["assets/results/easy-city-facebook-90d.jpg", "assets/results/easy-city-tiktok.jpg", "assets/results/easy-city-facebook-30d.jpg"]
   }
 ];

@@ -19,6 +19,12 @@
       const card = document.createElement("article");
       card.className = "rcard reveal";
       card.innerHTML = `
+        ${shots.length ? `
+        <button type="button" class="rcard__cover js-shot" data-index="${shots[0]}" aria-label="View ${esc(r.brand)} dashboard screenshot">
+          <img src="${esc(r.shots[0])}" style="${r.coverPos ? `object-position:${esc(r.coverPos)}` : ""}" alt="${esc(r.brand)} ${esc(r.platform)} insights screenshot" loading="lazy">
+          <span class="rcard__cover-tag">Real dashboard${shots.length > 1 ? ` · ${shots.length} screenshots` : ""}</span>
+          <span class="rcard__cover-zoom">View proof ↗</span>
+        </button>` : ""}
         <div class="rcard__head">
           <span class="rcard__platform">${esc(r.platform)}</span>
           <span class="rcard__period">${esc(r.period)}</span>
@@ -35,8 +41,8 @@
         </div>
         ${r.outcome ? `<div class="rcard__outcome">✓ ${esc(r.outcome)}</div>` : ""}
         <ul class="rcard__metrics">${(r.metrics || []).map(m => `<li><b>${esc(m.value)}</b><span>${esc(m.label)}</span></li>`).join("")}</ul>
-        <p class="rcard__note">${esc(r.note)}</p>
-        ${shots.length ? `<button type="button" class="rcard__proof js-shot" data-index="${shots[0]}">View dashboard proof <span>↗</span></button>` : ""}`;
+        ${(r.story || []).length ? `<div class="rcard__story"><h4>What I did</h4><ol>${r.story.map(t => `<li>${esc(t)}</li>`).join("")}</ol></div>` : ""}
+        ${r.note ? `<p class="rcard__note">${esc(r.note)}</p>` : ""}`;
       grid.appendChild(card);
     });
     if (results.length % 2) {
