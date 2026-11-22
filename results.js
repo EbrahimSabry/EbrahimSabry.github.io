@@ -72,5 +72,56 @@ window.RESULTS = [
     ],
     note: "Month one. Almost a million views, nearly all from new people who had never followed the brand.",
     shots: []
+  },
+  {
+    brand: "Easy City",
+    sector: "E-commerce & delivery platform",
+    country: "KSA",
+    platform: "TikTok",
+    period: "Account overview",
+    goal: "Awareness & app adoption",
+    hero: { value: 3.4, decimals: 1, suffix: "M", label: "Video views" },
+    metrics: [
+      { value: "8.3K", label: "Likes" },
+      { value: "7.6K", label: "Profile views" },
+      { value: "853", label: "Shares" },
+      { value: "207", label: "Comments" }
+    ],
+    note: "Short-form content that put a new delivery platform in front of millions of Saudi viewers.",
+    shots: []
+  },
+  {
+    brand: "Saudi Brand · Facebook",
+    sector: "Traffic-focused content",
+    country: "KSA",
+    platform: "Facebook",
+    period: "30 days",
+    goal: "Traffic & link clicks",
+    hero: { value: 1.7, decimals: 1, suffix: "M", label: "Views" },
+    metrics: [
+      { value: "248.5K", label: "Unique viewers" },
+      { value: "9.4K", label: "Link clicks" },
+      { value: "959", label: "Interactions" },
+      { value: "30", label: "Days" }
+    ],
+    note: "Content built to send people off the platform and onto the brand's own pages.",
+    shots: []
+  },
+  {
+    brand: "Saudi Brand · Facebook",
+    sector: "Always-on content plan",
+    country: "KSA",
+    platform: "Facebook",
+    period: "90 days",
+    goal: "Reach & traffic",
+    hero: { value: 3.2, decimals: 1, suffix: "M", label: "Views" },
+    metrics: [
+      { value: "448.8K", label: "Unique viewers" },
+      { value: "15.9K", label: "Link clicks" },
+      { value: "2.1K", label: "Interactions" },
+      { value: "90", label: "Days" }
+    ],
+    note: "A steady content engine across a full quarter, turning reach into real website visits.",
+    shots: []
   }
 ];
