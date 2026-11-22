@@ -573,3 +573,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .rcard__proof:hover { background: var(--ink); color: var(--bg); }
 @media (max-width: 860px) { .rgrid { grid-template-columns: 1fr; } .rcard__organic { margin-left: 0; } }
+
+.rcard--cta { background: var(--ink); color: var(--bg); justify-content: space-between; min-height: 420px; }
+.rcard--cta::after { background: radial-gradient(circle, rgba(255,255,255,.12), transparent 65%); }
+.rcard--cta .rcard__organic { margin-left: 0; align-self: flex-start; background: rgba(255,255,255,.1); color: var(--on-dark); font-size: 12.5px; padding: 6px 12px; border-radius: 999px; font-family: var(--display); }
+.rcard--cta h3 { font-size: clamp(44px, 5.4vw, 80px); letter-spacing: -.05em; line-height: .92; }
+.rcard--cta p { color: var(--on-dark-muted); max-width: 380px; }
+.rcard__cta-btn { align-self: flex-start; display: inline-flex; gap: 10px; padding: 16px 26px; border-radius: 999px; background: var(--bg); color: var(--ink); font-family: var(--display); font-weight: 500; transition: transform .5s var(--ease); }
+.rcard--cta:hover .rcard__cta-btn { transform: translateX(8px); }

@@ -39,6 +39,17 @@
         ${shots.length ? `<button type="button" class="rcard__proof js-shot" data-index="${shots[0]}">View dashboard proof <span>↗</span></button>` : ""}`;
       grid.appendChild(card);
     });
+    if (results.length % 2) {
+      const cta = document.createElement("a");
+      cta.href = "#contact";
+      cta.className = "rcard rcard--cta reveal";
+      cta.innerHTML = `
+        <span class="rcard__organic">Next case study</span>
+        <h3>Your brand<br>could be next.</h3>
+        <p>Tell me your goal: sales, awareness, leads or sign-ups. I'll build the strategy to hit it organically.</p>
+        <span class="rcard__cta-btn">Let's talk <span>↗</span></span>`;
+      grid.appendChild(cta);
+    }
   } else {
     $$(".js-results-link").forEach(a => a.remove());
   }
